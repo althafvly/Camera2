@@ -7,11 +7,10 @@
 bin/
 gen/
 # ignore idea folder
-.idea/
 .gradle/
+.idea/
 /build/
 */build/
-/gradle/
 /gradlew
 /gradlew.bat
 /local.properties
