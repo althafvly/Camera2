@@ -1,6 +1,6 @@
 [submodule "framework_ex/frameworks_ex"]
 	path = framework_ex/frameworks_ex
-	url = git@github.com:baby518/android_frameworks_ex.git
+	url = git@github.com:althafvly/android_frameworks_ex.git
 [submodule "app/Camera2"]
 	path = app/Camera2
-	url = git@github.com:baby518/Camera2_aosp_app.git
+	url = git@github.com:althafvly/android_packages_apps_Camera2.git

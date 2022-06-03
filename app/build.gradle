@@ -8,10 +8,12 @@ def srcFolder = [
         camera_folder + '/src_pd',
         camera_folder + '/src_pd_gcam',
         camera_folder + '/config/src',
+        camera_folder + '/quickReader/src',
 ]
 
 def resFolder = [
         camera_folder + '/res',
+        camera_folder + '/quickReader/res',
         camera_folder + '/res_p',
 ]
 
@@ -20,7 +22,7 @@ def buildInfo = rootProject.ext.buildInfo
 android {
     compileSdkVersion buildInfo.compileSdkVersion
     defaultConfig {
-        applicationId "com.baby518.camera2"
+        applicationId "org.lineageos.camera2"
         minSdkVersion buildInfo.minSdkVersion
         targetSdkVersion buildInfo.compileSdkVersion
         versionCode getCurrentDate() as int
@@ -87,6 +89,7 @@ android {
 
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
+    api fileTree(include: ['*.jar', "*.aar"], dir: 'Camera2/quickReader/libs')
     api project(':framework_ex')
     compileOnly project(':legacy')
 //    compileOnly files(getLayoutLibPath(android))
@@ -96,7 +99,7 @@ dependencies {
     implementation 'com.adobe.xmp:xmpcore:5.1.2'
     implementation "androidx.legacy:legacy-support-v4:1.0.0"
     implementation "androidx.legacy:legacy-support-v13:1.0.0"
-    implementation "androidx.core:core:1.7.0"
+    implementation "androidx.core:core:1.8.0"
 }
 
 def static getCurrentDate() {
